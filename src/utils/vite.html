@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&ast;&ast;1&period; &#x6838;&#x5fc3;&#x914d;&#x7f6e;&#x9879;&ast;&ast;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p>Vite 是一个现代化的前端构建工具，它使用 Rollup 作为底层打包工具。Vite 的默认配置项已经经过优化，适合大多数项目的需求。如果你想详细了解 Vite 的默认配置项，可以通过查看 <a href="https://vitejs.dev/config/">Vite 官方文档</a> 或其源码来获取更多信息。</p>
+<p>以下是一个详细的 Vite 默认配置项列表，基于 Vite 的核心功能和插件行为：</p>
+<hr>
+<h3 id="1-核心配置项"><strong>1. 核心配置项</strong></h3>
+<h4 id="root"><strong>root</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>process.cwd()</code>（当前工作目录）</li>
+<li><strong>说明</strong>: 指定项目的根目录。Vite 会从该目录开始解析文件。</li>
+</ul>
+<h4 id="base"><strong>base</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>/</code></li>
+<li><strong>说明</strong>: 部署时的基本路径。如果应用部署在子路径下（如 <code>/app/</code>），需要设置为相应的路径。</li>
+</ul>
+<h4 id="mode"><strong>mode</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>development</code>（开发模式）或 <code>production</code>（生产模式）</li>
+<li><strong>说明</strong>: 指定当前运行环境的模式。可以通过 <code>import.meta.env.MODE</code> 访问。</li>
+</ul>
+<h4 id="define"><strong>define</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>{ [key: string]: string }</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 定义全局常量替换。例如：<pre><code class="language-javascript"><span class="hljs-attr">define</span>: {
+  <span class="hljs-attr">__APP_VERSION__</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(<span class="hljs-string">&#x27;1.0.0&#x27;</span>),
+},
+</code></pre>
+</li>
+</ul>
+<h4 id="plugins"><strong>plugins</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>Plugin[]</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置 Vite 插件。可以是内置插件或第三方插件。</li>
+</ul>
+<h4 id="publicdir"><strong>publicDir</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string | false</code></li>
+<li><strong>默认值</strong>: <code>'public'</code></li>
+<li><strong>说明</strong>: 指定公共目录。该目录下的文件会被直接复制到构建输出目录中。</li>
+</ul>
+<h4 id="cachedir"><strong>cacheDir</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>node_modules/.vite</code></li>
+<li><strong>说明</strong>: 指定缓存目录。用于存储预构建的依赖和中间文件。</li>
+</ul>
+<h4 id="resolvealias"><strong>resolve.alias</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>{ [key: string]: string } | Array&lt;{ find: string | RegExp, replacement: string }&gt;</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置路径别名。例如：<pre><code class="language-javascript"><span class="hljs-attr">resolve</span>: {
+  <span class="hljs-attr">alias</span>: {
+    <span class="hljs-string">&#x27;@&#x27;</span>: path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&#x27;./src&#x27;</span>),
+  },
+},
+</code></pre>
+</li>
+</ul>
+<h4 id="resolvededupe"><strong>resolve.dedupe</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string[]</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 强制将某些依赖解析为同一个版本，避免重复加载。</li>
+</ul>
+<h4 id="resolveconditions"><strong>resolve.conditions</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string[]</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置条件导出的优先级。</li>
+</ul>
+<h4 id="resolvemainfields"><strong>resolve.mainFields</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string[]</code></li>
+<li><strong>默认值</strong>: <code>['module', 'jsnext:main', 'jsnext']</code></li>
+<li><strong>说明</strong>: 解析包入口时的字段优先级。</li>
+</ul>
+<h4 id="resolveextensions"><strong>resolve.extensions</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string[]</code></li>
+<li><strong>默认值</strong>: <code>['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']</code></li>
+<li><strong>说明</strong>: 自动补全的文件扩展名。</li>
+</ul>
+<hr>
+<h3 id="2-开发服务器配置项"><strong>2. 开发服务器配置项</strong></h3>
+<h4 id="serverhost"><strong>server.host</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string | boolean</code></li>
+<li><strong>默认值</strong>: <code>'localhost'</code></li>
+<li><strong>说明</strong>: 指定开发服务器监听的主机地址。设置为 <code>true</code> 时会监听所有地址。</li>
+</ul>
+<h4 id="serverport"><strong>server.port</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>number</code></li>
+<li><strong>默认值</strong>: <code>3000</code></li>
+<li><strong>说明</strong>: 开发服务器的端口号。</li>
+</ul>
+<h4 id="serverstrictport"><strong>server.strictPort</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>false</code></li>
+<li><strong>说明</strong>: 如果端口被占用，是否抛出错误。</li>
+</ul>
+<h4 id="serverhttps"><strong>server.https</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean | https.ServerOptions</code></li>
+<li><strong>默认值</strong>: <code>false</code></li>
+<li><strong>说明</strong>: 启用 HTTPS，并可配置自定义选项。</li>
+</ul>
+<h4 id="serveropen"><strong>server.open</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean | string</code></li>
+<li><strong>默认值</strong>: <code>false</code></li>
+<li><strong>说明</strong>: 是否自动打开浏览器。可以指定具体的路径。</li>
+</ul>
+<h4 id="serverproxy"><strong>server.proxy</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>Record&lt;string, string | ProxyOptions&gt;</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置代理规则。例如：<pre><code class="language-javascript"><span class="hljs-attr">proxy</span>: {
+  <span class="hljs-string">&#x27;/api&#x27;</span>: {
+    <span class="hljs-attr">target</span>: <span class="hljs-string">&#x27;http://localhost:5000&#x27;</span>,
+    <span class="hljs-attr">changeOrigin</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">rewrite</span>: <span class="hljs-function">(<span class="hljs-params">path</span>) =&gt;</span> path.<span class="hljs-title function_">replace</span>(<span class="hljs-regexp">/^\/api/</span>, <span class="hljs-string">&#x27;&#x27;</span>),
+  },
+},
+</code></pre>
+</li>
+</ul>
+<h4 id="servercors"><strong>server.cors</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean | CorsOptions</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 配置跨域资源共享（CORS）。</li>
+</ul>
+<h4 id="serverforce"><strong>server.force</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>false</code></li>
+<li><strong>说明</strong>: 强制依赖预构建，即使缓存存在。</li>
+</ul>
+<hr>
+<h3 id="3-构建配置项"><strong>3. 构建配置项</strong></h3>
+<h4 id="buildtarget"><strong>build.target</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string | string[]</code></li>
+<li><strong>默认值</strong>: <code>'modules'</code></li>
+<li><strong>说明</strong>: 构建目标的浏览器兼容性。例如：<code>esnext</code>、<code>es2020</code>。</li>
+</ul>
+<h4 id="buildpolyfillmodulepreload"><strong>build.polyfillModulePreload</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 是否注入模块预加载的 polyfill。</li>
+</ul>
+<h4 id="buildoutdir"><strong>build.outDir</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>'dist'</code></li>
+<li><strong>说明</strong>: 构建输出目录。</li>
+</ul>
+<h4 id="buildassetsdir"><strong>build.assetsDir</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string</code></li>
+<li><strong>默认值</strong>: <code>'assets'</code></li>
+<li><strong>说明</strong>: 静态资源的存放目录。</li>
+</ul>
+<h4 id="buildassetsinlinelimit"><strong>build.assetsInlineLimit</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>number</code></li>
+<li><strong>默认值</strong>: <code>4096</code>（4KB）</li>
+<li><strong>说明</strong>: 小于该大小的静态资源会被内联为 base64。</li>
+</ul>
+<h4 id="buildcsscodesplit"><strong>build.cssCodeSplit</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 是否启用 CSS 拆分。</li>
+</ul>
+<h4 id="buildsourcemap"><strong>build.sourcemap</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean | 'inline' | 'hidden'</code></li>
+<li><strong>默认值</strong>: <code>false</code></li>
+<li><strong>说明</strong>: 是否生成 source map。</li>
+</ul>
+<h4 id="buildrollupoptions"><strong>build.rollupOptions</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>RollupOptions</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 自定义 Rollup 配置。</li>
+</ul>
+<h4 id="buildminify"><strong>build.minify</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>'terser' | 'esbuild' | false</code></li>
+<li><strong>默认值</strong>: <code>'esbuild'</code></li>
+<li><strong>说明</strong>: 使用的代码压缩工具。</li>
+</ul>
+<h4 id="buildterseroptions"><strong>build.terserOptions</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>TerserOptions</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: Terser 的额外配置。</li>
+</ul>
+<h4 id="buildwrite"><strong>build.write</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 是否将构建结果写入磁盘。</li>
+</ul>
+<h4 id="buildemptyoutdir"><strong>build.emptyOutDir</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 是否清空输出目录。</li>
+</ul>
+<hr>
+<h3 id="4-css-配置项"><strong>4. CSS 配置项</strong></h3>
+<h4 id="cssmodules"><strong>css.modules</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>CSSModulesOptions | false</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置 CSS 模块的行为。</li>
+</ul>
+<h4 id="csspostcss"><strong>css.postcss</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string | PostCSS.ProcessOptions</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 自定义 PostCSS 配置。</li>
+</ul>
+<h4 id="csspreprocessoroptions"><strong>css.preprocessorOptions</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>{ [key: string]: any }</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 配置 CSS 预处理器的选项。例如：<pre><code class="language-javascript"><span class="hljs-attr">css</span>: {
+  <span class="hljs-attr">preprocessorOptions</span>: {
+    <span class="hljs-attr">scss</span>: {
+      <span class="hljs-attr">additionalData</span>: <span class="hljs-string">`@import &quot;@/styles/variables.scss&quot;;`</span>,
+    },
+  },
+},
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="5-其他配置项"><strong>5. 其他配置项</strong></h3>
+<h4 id="envprefix"><strong>envPrefix</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>string | string[]</code></li>
+<li><strong>默认值</strong>: <code>'VITE_'</code></li>
+<li><strong>说明</strong>: 环境变量前缀。</li>
+</ul>
+<h4 id="loglevel"><strong>logLevel</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>'info' | 'warn' | 'error' | 'silent'</code></li>
+<li><strong>默认值</strong>: <code>'info'</code></li>
+<li><strong>说明</strong>: 日志级别。</li>
+</ul>
+<h4 id="clearscreen"><strong>clearScreen</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>boolean</code></li>
+<li><strong>默认值</strong>: <code>true</code></li>
+<li><strong>说明</strong>: 是否在启动时清屏。</li>
+</ul>
+<h4 id="optimizedeps"><strong>optimizeDeps</strong></h4>
+<ul>
+<li><strong>类型</strong>: <code>DepOptimizationOptions</code></li>
+<li><strong>默认值</strong>: 无</li>
+<li><strong>说明</strong>: 依赖优化的配置。</li>
+</ul>
+<hr>
+<h3 id="总结">总结</h3>
+<p>以上是 Vite 的默认配置项的详细列表。你可以根据项目需求覆盖这些默认配置。如果你需要更高级的功能，可以参考 <a href="https://vitejs.dev/config/">Vite 官方文档</a> 或其源码中的 <code>defaultConfig</code> 文件。</p>
+<p>希望这份清单对你有所帮助！</p>
+
+            
+            
+        </body>
+        </html>
